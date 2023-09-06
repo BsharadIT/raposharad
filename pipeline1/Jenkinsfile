@@ -31,6 +31,6 @@ pipeline {
         
         failure {
             echo 'Python script execution failed'
-        }
-    }
+        }
+    }
 }
