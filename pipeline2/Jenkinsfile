@@ -6,8 +6,10 @@ pipeline {
                 script {
                      withCredentials([[$class: 'AmazonWebServicesCredentialsBinding',
                                       credentialsId: 'BOB',
-                                      accessKeyVariable: 'AKIAWIVDCUIS5PYYZ55Q',
-                                      secretKeyVariable: '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']]) {
+                                      accessKeyVariable: 'AKIATLZVEHTZOIOIGBXF'
+',
+                                      secretKeyVariable: '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
+']]) {
                     sh 'aws ec2 describe-instances --region ap-south-1'
                                           
                                       }
