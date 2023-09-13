@@ -5,7 +5,7 @@ pipeline {
             steps {
                 withAWS(credentials: 'new', region: 'ap-south-1') 
                 {
-                    sh 'python pipeline3/create_instance.py'
+                    sh 'python pipeline4/create_instance.py'
                 }
             }
         }
