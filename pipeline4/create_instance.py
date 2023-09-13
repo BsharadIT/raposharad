@@ -1,5 +1,5 @@
 import boto3
-ec2 = boto3.resource('ec2',region_name = 'ap-south-1')
+ec2 = boto3.resource('ec2')
 
 
 instances = ec2.create_instances(
