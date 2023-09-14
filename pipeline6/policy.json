@@ -7,7 +7,7 @@
 			"Action": [
 				"ec2:*"
 			],
-			"Resource": "arn:aws:iam::231502789874:user/thanos"
+			"Resource": "*"
 		}
 	]
 }
