@@ -1,5 +1,6 @@
 import boto3
-def create_user(username):
-    iam = boto3.client("iam")
-    response = iam.create_user(UserName="bob2")
-    print(response)
+iam = boto3.resource('iam') 
+created_user = iam.create_user(
+    UserName='thanos'
+)
+print(created_user)
