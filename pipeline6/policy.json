@@ -5,10 +5,9 @@
 			"Sid": "Statement1",
 			"Effect": "Allow",
 			"Action": [
-				"ec2:*",
-				"s3:*"
+				"ec2:*"
 			],
-			"Resource": []
+			"Resource": [arn:aws:iam::231502789874:user/thanos]
 		}
 	]
 }
