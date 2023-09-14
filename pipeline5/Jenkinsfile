@@ -5,7 +5,7 @@ pipeline {
             steps {
                 withAWS(credentials: 'admin', region: 'ap-south-1') 
                 {
-                    sh 'python pipeline5/policy.json'
+                    sh 'python pipeline5/create_user.py'
                 }
             }
         }
