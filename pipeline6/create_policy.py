@@ -3,7 +3,7 @@ import json
 
 iam = boto3.client('iam')
 def create_policy():
-    with open('pipeline4/policy.json', 'r') as f:
+    with open('pipeline6/create_policy', 'r') as f:
         policy_document = json.load(f)
     response = iam.create_policy(
         PolicyName="abc",
