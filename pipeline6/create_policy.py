@@ -6,12 +6,12 @@ def create_policy():
     with open('pipeline4/policy.json', 'r') as f:
         policy_document = json.load(f)
     response = iam.create_policy(
-        PolicyName="xyz3",
+        PolicyName="abc",
         PolicyDocument=json.dumps(policy_document) 
     )
 def create_user():
     response = iam.create_user(
-        UserName='bob'
+        UserName='bob1'
     )
     print(response)
 def attach_policy():
