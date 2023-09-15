@@ -1,23 +1,24 @@
+import boto3
 import json
 
-def create_iam_policy():
-    iam = boto3.client('iam')
-
-    my_managed_policy ={
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Sid": "Statement1",
-			"Effect": "Allow",
-			"Action": [
-				"ec2:*"
-			],
-			"Resource": "*"
-		}
-	]
-}
+iam = boto3.client('iam')
+def create_policy():
+    with open('pipeline4/policy.json', 'r') as f:
+        policy_document = json.load(f)
     response = iam.create_policy(
-        PolicyName='ec2policy',
-        PolicyDocument=json.dumps(my_managed_policy)
+        PolicyName="xyz3",
+        PolicyDocument=json.dumps(policy_document) 
+    )
+def create_user():
+    response = iam.create_user(
+        UserName='bob'
     )
     print(response)
+def attach_policy():
+    response = iam.attach_user_policy(
+    UserName='bob',
+    PolicyArn='arn:aws:iam::430912479781:policy/xyz3'
+)
+create_policy()
+# create_user()
+# attach_policy()
